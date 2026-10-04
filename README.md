@@ -1,6 +1,6 @@
 # reasoning-lens
 
-![reasoning-lens banner](assets/banner.png)
+![reasoning-lens banner: Seven minds. One problem. See where they disagree.](assets/banner.png)
 
 ![Version](https://img.shields.io/badge/version-0.2.0--dev-orange)
 ![Status](https://img.shields.io/badge/status-pre--release%2C%20not%20yet%20evaluated-lightgrey)

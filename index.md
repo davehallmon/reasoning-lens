@@ -4,6 +4,8 @@ title: reasoning-lens
 
 # reasoning-lens
 
+![reasoning-lens banner: Seven minds. One problem. See where they disagree.](assets/banner.png)
+
 A Claude Skill that runs your idea past seven philosophers' ways of reasoning, one at a time, so you see what each one notices.
 
 ## Get It
@@ -20,6 +22,10 @@ A Claude Skill that runs your idea past seven philosophers' ways of reasoning, o
 ## Status
 
 Pre-release. Not yet evaluated.
+
+## The Family
+
+reasoning-lens covers *how to think*. Its sibling, [problem-lens](https://github.com/davehallmon/problem-lens), covers *what to do*: twelve lenses, six moves, one first step.
 
 ## Install
 

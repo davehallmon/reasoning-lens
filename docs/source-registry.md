@@ -65,3 +65,4 @@ Derived files are project interpretation. They do not replace the upstream promp
 | File | Source | Note |
 |---|---|---|
 | `assets/banner.png` | `Banner-Reasoning-Lens_v3.png` | OCKHAM maker mark; see `docs/DESIGN.md` §9 |
+| `assets/social-preview.png` | Banner padded to 1280×640 | Upload in Settings → General → Social preview |
