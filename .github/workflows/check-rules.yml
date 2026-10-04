@@ -1,0 +1,29 @@
+name: Check outputs against Skill rules
+
+on:
+  pull_request:
+    paths:
+      - "reasoning-lens/**"
+      - "evals/**"
+  push:
+    branches: [main]
+    paths:
+      - "reasoning-lens/**"
+      - "evals/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check examples
+        run: python3 evals/check_rules.py reasoning-lens/examples/*.md
+      - name: Check recorded Skill runs
+        run: |
+          shopt -s nullglob globstar
+          files=(evals/runs/**/*-skill.md)
+          if [ ${#files[@]} -eq 0 ]; then echo "No recorded runs yet."; exit 0; fi
+          python3 evals/check_rules.py "${files[@]}"
