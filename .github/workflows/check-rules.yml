@@ -21,9 +21,9 @@ jobs:
           python-version: "3.12"
       - name: Check examples
         run: python3 evals/check_rules.py reasoning-lens/examples/*.md
-      - name: Check recorded Skill runs
+      - name: Check recorded Full (Skill) runs
         run: |
           shopt -s nullglob globstar
-          files=(evals/runs/**/*-skill.md)
+          files=(evals/runs/**/*-F-*.md)
           if [ ${#files[@]} -eq 0 ]; then echo "No recorded runs yet."; exit 0; fi
           python3 evals/check_rules.py "${files[@]}"

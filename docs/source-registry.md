@@ -5,12 +5,13 @@
 | Field | Value |
 |---|---|
 | Project | reasoning-lens (formerly "Philosophical Reasoning Router") |
-| Version | 0.2.0-dev |
-| Release status | pre-release, not yet evaluated |
+| Version | 0.2.0 |
+| Release status | experimental pre-release; Round 1 evaluation pending |
 | Architecture | sweep (see `docs/decisions/0001-sweep-not-router.md`) |
 | Public repo | github.com/davehallmon/reasoning-lens |
 | Last verification | 2026-10-04 |
-| Production validation | not complete; see `docs/DESIGN.md` §7 |
+| Evaluation protocol | `evals/PROTOCOL.md` v1.0.0, frozen 2026-10-04 |
+| Production validation | not run; 1.0.0 requires a Round 1 Strong pass (`evals/PROTOCOL.md`) |
 
 ## Research source
 
@@ -27,7 +28,7 @@
 | Branch | main |
 | Commit | `0682e819a19e3371c8f9d5c3ecd308a9cd0ea1cb` |
 | First retrieved | 2026-10-01 |
-| Verified | 2026-10-04 (commit is still `main` HEAD; all blob SHAs below match) |
+| Verified | 2026-10-04 (rechecked at release: commit is still `main` HEAD, all blob SHAs below match, no license file) |
 | License | none declared as of 2026-10-04 |
 
 Because no license is declared, the prompts are **not redistributed** in this repo. The private development workspace keeps local copies (`.txt` renamed to `.md`, content unchanged) for source-fidelity review only.
@@ -49,7 +50,8 @@ Because no license is declared, the prompts are **not redistributed** in this re
 | `docs/profiles/Profile_*.md` (v0.2) | Full normalized profiles, sweep model | Upstream prompts; router-era profiles v0.1 |
 | `reasoning-lens/references/lenses.md` | Run-time lens cards | Profiles v0.2 |
 | `reasoning-lens/SKILL.md` | Skill logic | `docs/DESIGN.md` |
-| `evals/cases.md` | Sweep eval corpus | Router-era `Router_Evaluation_Cases.md` themes, rewritten |
+| `evals/cases.md` | Eval corpus 0.2.0 (23 cases) | Router-era `Router_Evaluation_Cases.md` themes, rewritten; injection cases new |
+| `evals/baseline-prompt.md` (Cards-only block) | Stripped lens cards: Asks, Moves, Notices | `reasoning-lens/references/lenses.md` at 0.2.0 |
 
 Derived files are project interpretation. They do not replace the upstream prompts.
 
