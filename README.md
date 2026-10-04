@@ -2,14 +2,14 @@
 
 ![reasoning-lens banner: Seven minds. One problem. See where they disagree.](assets/banner.png)
 
-![Version](https://img.shields.io/badge/version-0.2.0--dev-orange)
-![Status](https://img.shields.io/badge/status-pre--release%2C%20not%20yet%20evaluated-lightgrey)
+![Version](https://img.shields.io/badge/version-0.2.0-orange)
+![Status](https://img.shields.io/badge/status-experimental%2C%20evaluation%20pending-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)
 
 A Claude Skill that runs your idea past seven philosophers' ways of reasoning, one at a time, so you see what each one notices, and where they disagree.
 
-> **Pre-release.** No eval rounds have run yet. See [How It Will Be Tested](#how-it-will-be-tested).
+> **Experimental pre-release (0.2.0).** No eval rounds have run yet. See [How It Will Be Tested](#how-it-will-be-tested).
 
 ## Why
 
@@ -87,13 +87,14 @@ Background: 400 employees. Managers say the annual review takes too long; we hav
 
 ## How It Will Be Tested
 
-Each release will be tested on twenty cases against two conditions: Claude asked to look at the same idea "through the reasoning of seven philosophers" (the cheap alternative anyone could type), and plain Claude. Blind judges score three things:
+Before 1.0.0, the Skill must pass a pre-registered evaluation, [`evals/PROTOCOL.md`](evals/PROTOCOL.md). The method and thresholds were fixed before any output was generated.
 
-1. **Lens distinctness:** does each lens add a point the others do not?
-2. **Real disagreement:** are listed disagreements real, or only emphasis, or made up? Does the Skill admit agreement?
-3. **Paired comparison:** does the Skill beat the prompted baseline, criterion by criterion, including reading time?
+The key test is whether the Skill's structure earns its place. The full Skill is compared with Claude given the same seven lens cards but none of the orchestration (no committed stances, no disagreement test, no two ways forward). Plain Claude and Claude given only the philosophers' names complete the comparison, to show whether the value comes from the names, the cards, or the structure. Judges from a different model family score the outputs blind on two things:
 
-All runs, scores, and caveats will be in [`evals/`](evals/), including rounds that lose. Until then, treat the Skill as an experiment.
+1. **Disagreement calibration:** does it find the disagreements that matter, and avoid inventing them when the idea is sound?
+2. **Resolution condition:** does it name the fact, value, or test that would settle the main uncertainty?
+
+Length is measured, not judged, and the Skill fails the bar if it wins only by saying more. All runs, scores, and caveats will be in [`evals/`](evals/), including rounds that lose. Until then, treat the Skill as an experiment.
 
 ## Evidence
 

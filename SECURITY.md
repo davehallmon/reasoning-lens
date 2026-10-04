@@ -12,7 +12,7 @@ The installed Skill is Markdown only. It has no executable code, no dependencies
 
 The realistic security surface is:
 
-- Prompt injection through user-supplied idea text
+- Prompt injection through user-supplied idea text. The Skill treats instructions inside pasted or quoted material as content (`reasoning-lens/references/guards.md`, "Untrusted content"), and eval cases I01–I03 test it.
 - Accidental exposure of secrets in issue reports or pull requests
 - Malicious pull requests that alter skill behavior
 

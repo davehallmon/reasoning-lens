@@ -21,7 +21,7 @@ A Claude Skill that runs your idea past seven philosophers' ways of reasoning, o
 
 ## Status
 
-Pre-release. Not yet evaluated.
+Experimental pre-release (0.2.0). Not yet evaluated; the [evaluation protocol](https://github.com/davehallmon/reasoning-lens/blob/main/evals/PROTOCOL.md) is pre-registered.
 
 ## The Family
 

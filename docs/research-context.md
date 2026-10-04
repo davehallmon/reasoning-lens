@@ -38,7 +38,7 @@ Prompts and data: [github.com/HassanHarb92/Sci_reasoning_LLMs](https://github.co
 - Sequences or combinations of prompts.
 - A gate that decides when no prompt is needed.
 - Disagreement among prompts as an output.
-- Comparison with a named-philosophers prompt like reasoning-lens's baseline.
+- Comparison with prompts that only name the philosophers, or that give their methods without structure, like the controls in `evals/PROTOCOL.md`.
 
 ## Evidence boundary for this project
 

@@ -1,6 +1,6 @@
 # reasoning-lens — Design Specification
 
-**Spec version:** 0.2.0-dev · **Status:** pre-release, not yet evaluated · **Updated:** 2026-10-04
+**Spec version:** 0.2.0 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-04
 
 This is the development specification. The public overview is the repo `README.md`. The installed Skill is `reasoning-lens/SKILL.md`.
 
@@ -72,14 +72,15 @@ See `docs/decisions/0001-sweep-not-router.md`. In short: the banner promises dis
 |---|---|---|
 | `reasoning-lens/SKILL.md` | Skill logic | Yes |
 | `reasoning-lens/references/lenses.md` | Seven lens cards used at run time | Yes |
-| `reasoning-lens/references/guards.md` | Anti-convergence and honesty guards | Yes |
+| `reasoning-lens/references/guards.md` | Anti-convergence, honesty, and untrusted-content guards | Yes |
 | `reasoning-lens/references/output-format.md` | Output quick reference | Yes |
 | `reasoning-lens/references/evidence.md` | Evidence boundary, for user questions | Yes |
 | `reasoning-lens/examples/` | Development runs showing the format | Yes |
 | `docs/profiles/Profile_*.md` | Full normalized profiles (source-fidelity layer) | No |
 | `docs/research-context.md` | Evidence boundary | No |
 | `docs/source-registry.md` | Provenance and versions | No |
-| `evals/` | Release gate, cases, rubric, checker, runs | No |
+| `evals/PROTOCOL.md` | Evaluation protocol and 1.0.0 pass criteria (single authority) | No |
+| `evals/` (other files) | Prompts, rubric, cases, checker, runs | No |
 
 Three layers stay separate:
 
@@ -111,26 +112,24 @@ Do not call any project hypothesis "research-validated". Public copy makes no ou
 
 ## 7. Release gate for 1.0.0
 
-1.0.0 ships when all of these hold. Thresholds are proposals until the first eval round; adjust them in a CHANGELOG entry, never silently.
+0.x releases are experimental and do not require an evaluation round. 1.0.0 ships when all of these hold:
 
-1. Seven profiles pass a source-fidelity review against the upstream prompts at the pinned commit.
-2. `SKILL.md` and references pass a cross-reference check.
-3. At least 20 cases run: 15 sweep cases (including at least 4 designed to produce agreement) and 5 gate cases (3 should skip, 2 boundary).
-4. **Measure 1 — Lens distinctness.** Leave-one-out judging. Pass: mean of at least 5 of 7 lenses with a unique contribution per case, and every lens unique in at least half the cases.
-5. **Measure 2 — Real disagreement.** Each listed disagreement rated Real, Emphasis-only, or Manufactured. Pass: at least 80% Real, and "They mostly agree" used on at least half of the agreement-designed cases.
-6. **Measure 3 — Prompted baseline.** Blind paired comparison against Claude given the named-philosophers prompt in `evals/baseline-prompt.md`. Pass: wins at least equal losses. Report the paired gap and every criterion, including reading time, whatever the result.
-7. All runs pass `evals/check_rules.py`.
-8. Zero `NOT_RUN` or placeholder fields in release cases.
-9. Version, date, model, and source snapshot recorded in `CHANGELOG.md` and `docs/source-registry.md`.
+1. **Round 1 result: Strong pass**, as defined in `evals/PROTOCOL.md`. The protocol is the single authority for conditions, endpoints, thresholds, blocking conditions, and the claims each outcome allows. This section does not restate them.
+2. Seven profiles pass a source-fidelity review against the upstream prompts at the pinned commit.
+3. `SKILL.md` and references pass a cross-reference check.
+4. Zero `NOT_RUN` or placeholder fields in the Round 1 records.
+5. Version, date, generator and judge models, protocol commit, and source snapshot recorded in `CHANGELOG.md` and `docs/source-registry.md`.
 
-The router-era gate (25 cases, routing accuracy, DIRECT coverage, ambiguous-boundary routing, ChatGPT and Claude runs) is retired. A ChatGPT run is now optional: reasoning-lens is a Claude Skill.
+In brief, Round 1 compares the full Skill with the same lens cards given without the orchestration, on two pre-registered endpoints (disagreement calibration and resolution condition), with a length limit. Plain Claude and a names-only prompt complete the ablation. Changing any threshold requires a new protocol version and a CHANGELOG entry, before generation.
+
+An earlier, never-run design (the private 0.1.0-dev router) had a different gate. It is retired; see `docs/decisions/0001-sweep-not-router.md`.
 
 ## 8. Roadmap and open questions
 
 - **v2 lenses.** A philosophy-of-science cluster (Bacon, Peirce, Popper, Kuhn, Lakatos) was considered and deferred. Reasons: it is a second cluster, not more of the first; it overlaps (Lakatos with Popper and Kuhn, Hume with Popper); twelve lenses would worsen reading time; the lenses would be unsourced; and "twelve" collides with problem-lens's headline. Revisit only if eval data shows a gap the seven cannot cover.
-- **Name ablation.** Does the philosopher label matter, or only the moves? Compare a lens card with and without its name. The paper lists this as future work too.
+- **Name ablation.** Round 1 compares names alone with the rewritten cards (`evals/PROTOCOL.md` §6). Whether a card works as well without its philosopher's name is still open. The paper lists this as future work too.
 - **Order effects.** Does chronological order bias the sweep, for example by giving Hegel the last word? Test a shuffled order in a later round.
-- **Isolation.** If convergence shows up in Measure 2, test running each lens in a separate context.
+- **Isolation.** If Round 1 diagnostics show convergence (low lens distinctness, emphasis-only disagreements), test running each lens in a separate context.
 - **Overlap.** Watch for overlap with techbias-audit (four-voice bias review) and a work Socrates agent. reasoning-lens examines an idea's reasoning, not a text's framing bias.
 
 ## 9. Brand assets
