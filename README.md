@@ -15,7 +15,25 @@ A Claude Skill that runs your idea past seven philosophers' ways of reasoning, o
 
 Ask for "a few perspectives" and you usually get one answer said seven ways. reasoning-lens makes each lens commit to a stance, then lists only the disagreements that come from what each lens actually checks. When the lenses agree, it says so instead of inventing conflict.
 
-The seven reasoning methods come from a published study: Harb et al. (2026), *The ballad of LLM agents: philosophical reasoning for chemistry*. The study turned seven philosophers' methods into system prompts and tested each one alone on chemistry questions. reasoning-lens applies all seven, in sequence, to general ideas. That extension is this project's hypothesis, not the study's finding.
+The seven reasoning methods come from a published study: Harb et al. (2026), *The ballad of LLM agents: philosophical reasoning for chemistry*. The research boundary matters: the study tested the methods independently on chemistry questions; reasoning-lens extends them into a sequential sweep for general ideas.
+
+## Research Foundation
+
+reasoning-lens takes its starting point from Harb et al. (2026), *The ballad of LLM agents: philosophical reasoning for chemistry*. The study encoded seven philosophy-inspired reasoning methods as fixed system prompts and tested them independently on numerical chemistry questions.
+
+The paper did **not** test the sequential multi-lens method used here. That extension is the experiment behind reasoning-lens.
+
+**[Read the paper in this repository →](docs/research/harb-et-al-2026-philosophical-reasoning.pdf)**  
+[Publisher / DOI](https://doi.org/10.1088/2632-2153/ae792d)
+
+| Harb et al. (2026) | reasoning-lens |
+|---|---|
+| Chemistry benchmark | General ideas, plans, claims, and decisions |
+| Seven philosophy agents tested independently | Seven reasoning lenses run sequentially |
+| Numerical-answer accuracy | Disagreement calibration and resolution conditions |
+| Tests whether philosophy-inspired prompting changes model performance | Tests whether orchestration adds useful thinking beyond the lens cards |
+
+The distinction is deliberate: published findings are treated as evidence for the individual reasoning patterns, not as proof that this Skill's orchestration works. That claim is tested separately in this repository.
 
 ## What It Does
 
@@ -165,7 +183,7 @@ Details: [`docs/research-context.md`](docs/research-context.md).
 
 ## The Family
 
-reasoning-lens is one of two Skills from OCKHAM:
+reasoning-lens is one of two Skills from OCCAMI:
 
 | Skill | Question | Shape |
 |---|---|---|
