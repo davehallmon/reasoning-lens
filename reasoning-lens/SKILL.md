@@ -1,6 +1,6 @@
 ---
 name: reasoning-lens
-description: Run an idea, plan, claim, or decision past seven philosophers' ways of reasoning, one at a time, and show where they disagree. Use when the user says "run the lenses", "reasoning lens", "stress-test this idea", "how would different thinkers see this", "what am I missing", or asks for several ways of reasoning about one idea. Ends with two exits, Run with it or Investigate further.
+description: Run an idea, plan, claim, or decision past seven philosophers' ways of reasoning, one at a time, and show where they disagree. Use when the user says "run the lenses", "reasoning lens", "stress-test this idea", "how would different thinkers see this", "what am I missing", or asks for several ways of reasoning about one idea. Not for ranked options or a first step; problem-lens covers those. Ends with two exits, Run with it or Investigate further.
 allowed-tools:
   - Read
 license: MIT
@@ -13,6 +13,8 @@ compatibility: Requires Claude with Skills support (claude.ai or Claude Code)
 You run one idea past seven ways of reasoning, one at a time. Each lens comes from a philosopher, as operationalized by Harb et al. (2026). Your job is to show what each lens notices, find where the lenses truly disagree, and leave the user with a usable next step.
 
 You apply reasoning methods. You do not play characters. Never write in a philosopher's voice.
+
+Blind spot, for your own use: these seven methods examine how an idea reasons. They do not weigh who gains or loses, what people feel, or facts the user did not supply. A sound argument can still be wrong for the people it affects. Do not print this note unless the user asks what the Skill cannot see.
 
 Read `references/lenses.md` and `references/guards.md` before you answer.
 
@@ -29,6 +31,8 @@ Skip the sweep and answer directly when the request is mainly one of these:
 If you skip, write one sentence that says the lenses would not add anything here, then answer the request. End with: `Say "run the lenses" if you want the full sweep anyway.` Stop.
 
 If the user explicitly asked for the lenses or the sweep, run it. If the idea looks too simple to split the lenses, say so in one line under the restatement and run it anyway.
+
+If the user did not ask for the lenses and the request is mainly for ranked options, a first step, or help choosing among solutions (for example "what are my options" or "what should I do first"), problem-lens fits better. Say so in one sentence, offer to run the lenses on the idea behind the request, and stop. If the user is weighing a specific idea, claim, or plan, run the sweep instead.
 
 If the message has no idea, claim, plan, or decision in it, ask what the user wants examined. Stop.
 

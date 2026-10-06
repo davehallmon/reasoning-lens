@@ -260,9 +260,13 @@ Details: [`docs/research-context.md`](docs/research-context.md).
 - The task is a rewrite, a lookup, or code.
 - You need a ranked list of options and a first step. Use [problem-lens](https://github.com/davehallmon/problem-lens) for that.
 
+## What It Can't See
+
+The seven methods examine how an idea reasons. They do not weigh who gains or loses, what people feel, or facts you did not give. A sound argument can still be wrong for the people it affects. Treat the sweep as one view, not a verdict.
+
 ## The Family
 
-reasoning-lens is one of two Skills from OCCAMI:
+reasoning-lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
 
 | Skill | Question | Shape |
 |---|---|---|
