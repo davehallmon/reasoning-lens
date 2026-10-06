@@ -27,6 +27,57 @@ The seven reasoning methods come from a published study: Harb et al. (2026), *Th
   - **Investigate further:** the one question or test that would settle the biggest disagreement.
 - Skips the sweep for rewrites, lookups, definitions, code, and one-answer problems. It answers directly and offers the sweep anyway.
 
+## How It Works
+
+reasoning-lens keeps the seven methods independent during the sweep, then compares their committed stances to find genuine disagreement and a useful next step.
+
+```mermaid
+graph TD
+    A["Request received"] --> B{"Is there an idea, claim, plan, or decision?"}
+
+    B -->|No| C["Ask what the user wants examined"]
+    B -->|Yes| D{"Did the user explicitly request the lenses?"}
+
+    D -->|Yes| G["Restate the idea and state up to two assumptions"]
+    D -->|No| E{"Would a seven-lens sweep add value?"}
+
+    E -->|No| F["Answer directly and offer the full sweep"]
+    E -->|Yes| G
+
+    G --> H["Run all seven lenses independently from the same restatement"]
+    H --> I["Socrates, Plato, Aristotle, Descartes, Hume, Kant, Hegel"]
+    I --> J["Each lens notices something distinct and commits to a stance"]
+    J --> K{"Is there a real disagreement?"}
+
+    K -->|Yes| L["List one to three disagreements and what would settle them"]
+    K -->|No| M["Report that the lenses mostly agree"]
+
+    L --> N["Identify where the lenses agree"]
+    M --> O["Identify the fact most likely to change the shared view"]
+    N --> P["Give two ways forward"]
+    O --> P
+
+    P --> Q["Run with it: recommend what to do now and what would prove it wrong"]
+    P --> R["Investigate further: name the question or test that would settle the issue"]
+
+    Q --> S{"What happens next?"}
+    R --> S
+
+    S -->|Lens name| T["Expand only that lens"]
+    S -->|Investigate| U["Work the open question and update only what changes"]
+    S -->|New facts| V["Update affected stances, disagreements, and next steps"]
+
+    classDef start fill:#F2501D,color:#FFFFFF,stroke:#111827,stroke-width:2px;
+    classDef decision fill:#FFF1EB,color:#111827,stroke:#F2501D,stroke-width:2px;
+    classDef sweep fill:#111827,color:#FFFFFF,stroke:#F2501D,stroke-width:2px;
+    classDef outcome fill:#FFF8F4,color:#111827,stroke:#111827,stroke-width:1.5px;
+
+    class A start;
+    class B,D,E,K,S decision;
+    class G,H,I,J sweep;
+    class C,F,L,M,N,O,P,Q,R,T,U,V outcome;
+```
+
 ## The Lenses
 
 | Lens | Method | Asks |
