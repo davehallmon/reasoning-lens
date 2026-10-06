@@ -118,17 +118,76 @@ graph TD
 
 ## The Lenses
 
-| Lens | Method | Asks |
-|---|---|---|
-| Socrates | clarify and question | Are we examining the right idea, stated clearly? |
-| Plato | find the deeper pattern | What structure lies under this, and is the visible version only a partial view? |
-| Aristotle | classify and explain | What kind of thing is this, and what causes it? |
-| Descartes | break it down and check | Can this be built from reliable parts, in order, and verified? |
-| Hume | test the evidence | What is observed, what is inferred, and how confident should we be? |
-| Kant | examine conditions and limits | What must already be true for this to work, and where does it stop applying? |
-| Hegel | work the contradiction | Where does this pull against itself, and what fuller version keeps what is right on each side? |
+The seven lenses are not biographies or simulated personalities. Each translates a philosophy-inspired reasoning pattern into a concrete system behavior, and each runs independently against the same restated idea before the Skill compares their committed stances.
 
-These are reasoning methods, not characters. The Skill never writes in a philosopher's voice.
+<table>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/socrates.png" alt="Socrates reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Socrates · Assumption Gate</strong><br><br>
+Clarifies the object of reasoning before the system reasons about it: defining ambiguous terms, surfacing hidden assumptions, and testing whether the stated claim survives basic cross-examination. <strong>In the Skill:</strong> this protects the seven-lens sweep from confidently analyzing the wrong problem and gives every later lens the same explicit claim to examine.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/plato.png" alt="Plato reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Plato · Pattern Lift</strong><br><br>
+Moves upward from the visible case to the structure beneath it: distinguishing the metric, label, or local symptom from the larger pattern it may represent. <strong>In the Skill:</strong> this prevents the sweep from treating the user's current framing as the only possible representation of the problem.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/aristotle.png" alt="Aristotle reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Aristotle · Causal Map</strong><br><br>
+Classifies the thing being examined and separates the different kinds of explanation operating inside it: what it is, what drives it, what it is for, and which premises connect cause to conclusion. <strong>In the Skill:</strong> this exposes category errors, missing premises, and plans that confuse a means with the intended end.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/descartes.png" alt="René Descartes reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Descartes · Dependency Audit</strong><br><br>
+Decomposes the claim or plan into smaller dependencies and rebuilds it from the most reliable parts outward: testing whether each step is clear, established, and logically connected. <strong>In the Skill:</strong> this finds weak premises, broken sequences, and conclusions that cannot be reconstructed from what the user actually knows.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/hume.png" alt="David Hume reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Hume · Evidence Calibration</strong><br><br>
+Separates observation from inference and calibrates confidence to the evidence available, especially where correlation, extrapolation, or causal claims outrun what has actually been observed. <strong>In the Skill:</strong> this gives evidential claims a confidence boundary and identifies the specific evidence that would justify stronger belief.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/kant.png" alt="Immanuel Kant reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Kant · Boundary Check</strong><br><br>
+Examines the conditions that make the claim meaningful or valid in the first place, then marks where those conditions stop holding. <strong>In the Skill:</strong> this surfaces hidden preconditions, framework-dependent conclusions, and claims whose apparent certainty extends beyond their legitimate scope.
+</td>
+</tr>
+<tr>
+<td width="40%" align="center" valign="middle">
+<img src="assets/lenses/hegel.png" alt="G. W. F. Hegel reasoning lens card" width="150">
+</td>
+<td width="60%" valign="middle">
+<strong>Hegel · Contradiction Reframe</strong><br><br>
+Finds where an idea undermines one of its own commitments and asks whether the opposing pressure contains something that must be preserved. <strong>In the Skill:</strong> this turns genuine internal tension into a stronger formulation when synthesis is possible—and leaves it as a real choice when it is not.
+</td>
+</tr>
+</table>
+
+> **These are reasoning operations, not simulated personalities.** Each lens runs independently against the same restated idea before the Skill compares their committed stances.
+
 
 ## Sample Output
 
