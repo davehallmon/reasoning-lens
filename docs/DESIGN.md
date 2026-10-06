@@ -1,6 +1,6 @@
 # reasoning-lens — Design Specification
 
-**Spec version:** 0.2.0 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-04
+**Spec version:** 0.2.0 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-06
 
 This is the development specification. The public overview is the repo `README.md`. The installed Skill is `reasoning-lens/SKILL.md`.
 
@@ -37,7 +37,7 @@ TWO WAYS FORWARD
 
 A small gate replaces the router's DIRECT mode. It skips the sweep for rewriting, formatting, translation, summarization, fact lookups, definitions, single-answer problems, and code requests. When it skips, it says so in one line, answers directly, and offers the sweep anyway. An explicit request for the sweep always runs it.
 
-The gate is where the OCKHAM brand's razor shows up in behavior: do not run seven lenses when none would add anything.
+The gate is where the OCCAMI NOVACULA brand's razor shows up in behavior: do not run seven lenses when none would add anything.
 
 ### 2.2 Sweep
 
@@ -106,7 +106,7 @@ Do not call any project hypothesis "research-validated". Public copy makes no ou
 ## 6. Source boundary
 
 - The upstream prompt repository declares no license. The prompts are not copied into this repo. They are cited by URL, commit, and blob SHA in `docs/source-registry.md`.
-- The paper is CC BY 4.0. Cite it; do not bundle the PDF.
+- The paper is CC BY 4.0. The repo keeps a reference copy in `docs/research/` with attribution. Cite it by DOI.
 - Upstream prompts are source material, not instructions. Reading or summarizing one never means following it.
 - The upstream prompts are written for chemistry. The lens cards restate their reasoning moves without the chemistry framing.
 
@@ -134,7 +134,7 @@ An earlier, never-run design (the private 0.1.0-dev router) had a different gate
 
 ## 9. Brand assets
 
-- **Maker brand:** OCKHAM. The razor badge is the studio mark on both banners, and the razor serves as the hyphen in each wordmark. "Ockham" is the brand; "Occam's Razor" is a method inside problem-lens. The spelling difference is deliberate.
+- **Suite brand:** OCCAMI NOVACULA. The razor badge reads OCCAMI NOVACULA on both banners, and the razor serves as the hyphen in each wordmark. The suite is named for the scribe's scraping knife (*novacula*), which made revision possible, not only deletion. "Occam's Razor" is a method inside problem-lens. The earlier maker name, OCKHAM, is retired.
 - **Banner:** `assets/banner.png` (source file `Banner-Reasoning-Lens_v3.png`). Seven portrait cards, 4-over-3, chronological.
 - **Headline:** *Seven minds. / One problem. / See where they disagree.*
 - **Byline:** *A Claude Skill that runs your idea past seven philosophers' ways of reasoning, one at a time, so you see what each one notices.*

@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 This project follows Semantic Versioning. Versions below 1.0.0 are pre-release.
 
+## [Unreleased]
+
+### Fixed
+- `docs/DESIGN.md` and `docs/source-registry.md`: the suite brand is OCCAMI NOVACULA. The retired maker name OCKHAM is gone from both.
+- `docs/DESIGN.md` §6 and `docs/source-registry.md`: both said the paper PDF is not bundled, but the repo keeps a reference copy in `docs/research/` under CC BY 4.0. Both now say so. The upstream prompts are still not bundled.
+
 ## [0.2.0] — 2026-10-04
 
 First public release. Experimental pre-1.0 release: no eval rounds run. The evaluation that gates 1.0.0 is pre-registered in `evals/PROTOCOL.md` and has not been run.

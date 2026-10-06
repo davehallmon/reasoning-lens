@@ -17,7 +17,7 @@
 
 - **Paper:** Harb et al. (2026), *The ballad of LLM agents: philosophical reasoning for chemistry*, Mach. Learn.: Sci. Technol. 7, 030503.
 - **DOI:** 10.1088/2632-2153/ae792d
-- **License:** CC BY 4.0. Cited, not bundled.
+- **License:** CC BY 4.0. A reference copy of the paper is kept in `docs/research/` with attribution (see `docs/research/README.md`). The upstream prompts are cited, not bundled.
 
 ## Upstream prompt snapshot
 
@@ -66,5 +66,5 @@ Derived files are project interpretation. They do not replace the upstream promp
 
 | File | Source | Note |
 |---|---|---|
-| `assets/banner.png` | `Banner-Reasoning-Lens_v3.png` | OCKHAM maker mark; see `docs/DESIGN.md` §9 |
+| `assets/banner.png` | `Banner-Reasoning-Lens_v3.png` | OCCAMI NOVACULA suite mark; see `docs/DESIGN.md` §9 |
 | `assets/social-preview.png` | Banner padded to 1280×640 | Upload in Settings → General → Social preview |
