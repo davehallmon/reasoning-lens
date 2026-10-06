@@ -21,10 +21,30 @@ The seven reasoning methods come from a published study: Harb et al. (2026), *Th
 
 reasoning-lens takes its starting point from Harb et al. (2026), *The ballad of LLM agents: philosophical reasoning for chemistry*. The study encoded seven philosophy-inspired reasoning methods as fixed system prompts and tested them independently on numerical chemistry questions.
 
-The paper did **not** test the sequential multi-lens method used here. That extension is the experiment behind reasoning-lens.
+<table>
+<tr>
+<td width="60%" valign="top">
 
-**[Read the paper in this repository →](docs/research/harb-et-al-2026-philosophical-reasoning.pdf)**  
-[Publisher / DOI](https://doi.org/10.1088/2632-2153/ae792d)
+<a href="docs/research/harb-et-al-2026-philosophical-reasoning.pdf">
+  <img src="assets/harb-research.png" alt="Harb et al. 2026 research highlights: philosophy-inspired prompting improved performance for GPT-4o, GPT-5, and GPT-5.1 on a chemistry benchmark" width="100%">
+</a>
+
+</td>
+<td width="40%" valign="top">
+
+<strong>Philosophical prompting changed model performance.</strong><br><br>
+
+Harb et al. (2026) tested seven philosophy-inspired system prompts on 243 numerical ChemBench questions. Different reasoning methods helped different models and problems; no single philosopher was universally best.<br><br>
+
+<code>reasoning-lens</code> starts from those seven reasoning patterns, but asks a different question: <strong>what happens when they are orchestrated as a sequential reasoning system for general problems?</strong><br><br>
+
+<a href="docs/research/harb-et-al-2026-philosophical-reasoning.pdf">Read the paper →</a><br>
+<a href="https://doi.org/10.1088/2632-2153/ae792d">Publisher / DOI →</a><br>
+<a href="docs/research-context.md">Research boundary →</a>
+
+</td>
+</tr>
+</table>
 
 | Harb et al. (2026) | reasoning-lens |
 |---|---|
