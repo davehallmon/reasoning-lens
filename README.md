@@ -1,6 +1,6 @@
 # reasoning-lens
 
-![reasoning-lens banner: Seven minds. One problem. See where they disagree.](assets/banner.png)
+![reasoning-lens banner](assets/banner.png)
 
 ![Version](https://img.shields.io/badge/version-0.2.0-orange)
 ![Status](https://img.shields.io/badge/status-experimental%2C%20evaluation%20pending-lightgrey)
@@ -134,3 +134,5 @@ See `CONTRIBUTING.md`. Design spec: [`docs/DESIGN.md`](docs/DESIGN.md).
 ## License
 
 MIT for the original work in this repo. See `LICENSE` and `NOTICE.md`.
+
+![OCCAMI](assets/footer.png)
