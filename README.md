@@ -260,14 +260,20 @@ Details: [`docs/research-context.md`](docs/research-context.md).
 - The task is a rewrite, a lookup, or code.
 - You need a ranked list of options and a first step. Use [problem-lens](https://github.com/davehallmon/problem-lens) for that.
 
+## What It Can't See
+
+The lenses work from what you tell them. They cannot check facts you leave out, and they cannot judge taste: whether a design, a sentence, or an argument feels right. They can show what an idea does. What it should be stays with you. A stance is judgment, not measurement.
+
 ## The Family
 
-reasoning-lens is one of two Skills from OCCAMI:
+reasoning-lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
 
 | Skill | Question | Shape |
 |---|---|---|
 | [problem-lens](https://github.com/davehallmon/problem-lens) | What should I do? | Twelve lenses, six ranked moves, one first step |
 | reasoning-lens | How should I think about this? | Seven methods, one idea, the disagreements |
+
+Use problem-lens when you need ranked options and a first move. Use reasoning-lens first when you want to stress-test how you are thinking about an idea.
 
 ## Credits
 

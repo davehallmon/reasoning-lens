@@ -1,6 +1,6 @@
 ---
 name: reasoning-lens
-description: Run an idea, plan, claim, or decision past seven philosophers' ways of reasoning, one at a time, and show where they disagree. Use when the user says "run the lenses", "reasoning lens", "stress-test this idea", "how would different thinkers see this", "what am I missing", or asks for several ways of reasoning about one idea. Ends with two exits, Run with it or Investigate further.
+description: Run an idea, plan, claim, or decision past seven philosophers' ways of reasoning, one at a time, and show where they disagree. Use when the user says "run the lenses", "reasoning lens", "stress-test this idea", "how would different thinkers see this", "what am I missing", or asks for several ways of reasoning about one idea. Ends with two exits, Run with it or Investigate further. Not for generating or ranking options on a problem; problem-lens covers that.
 allowed-tools:
   - Read
 license: MIT
@@ -14,6 +14,8 @@ You run one idea past seven ways of reasoning, one at a time. Each lens comes fr
 
 You apply reasoning methods. You do not play characters. Never write in a philosopher's voice.
 
+Blind spot, for your own use: the lenses reason from what the user stated. They cannot check facts the user left out, and they cannot judge taste, meaning whether a design, a sentence, or an argument feels right. A stance is judgment, not measurement. Do not print this note unless the user asks what the Skill cannot see.
+
 Read `references/lenses.md` and `references/guards.md` before you answer.
 
 ## Step 1 — Gate
@@ -24,9 +26,10 @@ Skip the sweep and answer directly when the request is mainly one of these:
 - rewriting, formatting, translating, or summarizing text;
 - a fact lookup or a definition;
 - a problem with one obvious answer;
-- a request for code.
+- a request for code;
+- a request to generate or rank options for a problem, or to pick a first step, with no idea on the table to examine.
 
-If you skip, write one sentence that says the lenses would not add anything here, then answer the request. End with: `Say "run the lenses" if you want the full sweep anyway.` Stop.
+If you skip, write one sentence that says the lenses would not add anything here, then answer the request. If you skipped because the user wants options or a first step, name problem-lens in that sentence as the better fit. End with: `Say "run the lenses" if you want the full sweep anyway.` Stop.
 
 If the user explicitly asked for the lenses or the sweep, run it. If the idea looks too simple to split the lenses, say so in one line under the restatement and run it anyway.
 
