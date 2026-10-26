@@ -1,6 +1,6 @@
 # reasoning-lens — Design Specification
 
-**Spec version:** 0.2.0 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-06
+**Spec version:** 0.2.1 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-26
 
 This is the development specification. The public overview is the repo `README.md`. The installed Skill is `reasoning-lens/SKILL.md`.
 
@@ -37,7 +37,7 @@ TWO WAYS FORWARD
 
 A small gate replaces the router's DIRECT mode. It skips the sweep for rewriting, formatting, translation, summarization, fact lookups, definitions, single-answer problems, and code requests. When it skips, it says so in one line, answers directly, and offers the sweep anyway. An explicit request for the sweep always runs it.
 
-The gate is where the OCCAMI NOVACULA brand's razor shows up in behavior: do not run seven lenses when none would add anything.
+The gate is where the Ockham razor shows up in behavior: do not run seven lenses when none would add anything.
 
 ### 2.2 Sweep
 
@@ -134,7 +134,8 @@ An earlier, never-run design (the private 0.1.0-dev router) had a different gate
 
 ## 9. Brand assets
 
-- **Suite brand:** OCCAMI NOVACULA. The razor badge reads OCCAMI NOVACULA on both banners, and the razor serves as the hyphen in each wordmark. The suite is named for the scribe's scraping knife (*novacula*), which made revision possible, not only deletion. "Occam's Razor" is a method inside problem-lens. The earlier maker name, OCKHAM, is retired.
+- **Maker's mark:** Ockham. The razor badge is the logo for all of Ockham, and the razor serves as the hyphen in each wordmark. The badge on the current banner still reads OCCAMI NOVACULA; re-lettering is pending.
+- **Suite:** Organon, the thinking suite (orange ground, `#F94B10`). *Organon* is Greek for "tool" and the name of Aristotle's books on logic. Skills keep their own names. Novacula, the scribe's scraping knife, now names a separate writing suite (cobalt blue ground, `#0F528C`). "Occam's Razor" is a method inside problem-lens. The earlier suite name, OCCAMI NOVACULA, is retired.
 - **Banner:** `assets/banner.png` (source file `Banner-Reasoning-Lens_v3.png`). Seven portrait cards, 4-over-3, chronological.
 - **Headline:** *Seven minds. / One problem. / See where they disagree.*
 - **Byline:** *A Claude Skill that runs your idea past seven philosophers' ways of reasoning, one at a time, so you see what each one notices.*
