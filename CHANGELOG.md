@@ -5,6 +5,14 @@ This project follows Semantic Versioning. Versions below 1.0.0 are pre-release.
 
 ## [Unreleased]
 
+### Added
+- `reasoning-lens/SKILL.md`: a sibling handoff in the gate. If the user did not ask for the lenses and wants ranked options or a first step, the Skill names problem-lens in one sentence, offers the sweep on the idea behind the request, and stops. A specific idea, claim, or plan still gets the sweep.
+- `reasoning-lens/SKILL.md`: a "Blind spot" note for the model (the methods do not weigh who gains or loses, what people feel, or facts not supplied). It is not printed unless the user asks. The description also says the Skill is not for ranked options.
+- README: a "What It Can't See" section.
+
+### Changed
+- README: "The Family" now describes the suite as growing and links the profile.
+
 ### Fixed
 - `docs/DESIGN.md` and `docs/source-registry.md`: the suite brand is OCCAMI NOVACULA. The retired maker name OCKHAM is gone from both.
 - `docs/DESIGN.md` §6 and `docs/source-registry.md`: both said the paper PDF is not bundled, but the repo keeps a reference copy in `docs/research/` under CC BY 4.0. Both now say so. The upstream prompts are still not bundled.
