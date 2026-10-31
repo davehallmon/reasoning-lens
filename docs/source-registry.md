@@ -5,11 +5,11 @@
 | Field | Value |
 |---|---|
 | Project | reasoning-lens (formerly "Philosophical Reasoning Router") |
-| Version | 0.2.0 |
+| Version | 0.2.1 |
 | Release status | experimental pre-release; Round 1 evaluation pending |
 | Architecture | sweep (see `docs/decisions/0001-sweep-not-router.md`) |
 | Public repo | github.com/davehallmon/reasoning-lens |
-| Last verification | 2026-10-04 |
+| Last verification | 2026-10-26 |
 | Evaluation protocol | `evals/PROTOCOL.md` v1.0.0, frozen 2026-10-04 |
 | Production validation | not run; 1.0.0 requires a Round 1 Strong pass (`evals/PROTOCOL.md`) |
 
@@ -28,8 +28,8 @@
 | Branch | main |
 | Commit | `0682e819a19e3371c8f9d5c3ecd308a9cd0ea1cb` |
 | First retrieved | 2026-10-01 |
-| Verified | 2026-10-04 (rechecked at release: commit is still `main` HEAD, all blob SHAs below match, no license file) |
-| License | none declared as of 2026-10-04 |
+| Verified | 2026-10-26 (rechecked for 0.2.1: commit is still `main` HEAD, all blob SHAs below match, no license file). Previously verified 2026-10-04. |
+| License | none declared as of 2026-10-26 |
 
 Because no license is declared, the prompts are **not redistributed** in this repo. The private development workspace keeps local copies (`.txt` renamed to `.md`, content unchanged) for source-fidelity review only.
 
@@ -66,5 +66,5 @@ Derived files are project interpretation. They do not replace the upstream promp
 
 | File | Source | Note |
 |---|---|---|
-| `assets/banner.png` | `Banner-Reasoning-Lens_v3.png` | OCCAMI NOVACULA suite mark; see `docs/DESIGN.md` §9 |
+| `assets/banner.png` | `Banner-Reasoning-Lens_v3.png` | Ockham maker's mark; badge art still reads OCCAMI NOVACULA, re-lettering pending. See `docs/DESIGN.md` §9 |
 | `assets/social-preview.png` | Banner padded to 1280×640 | Upload in Settings → General → Social preview |

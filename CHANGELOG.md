@@ -3,7 +3,17 @@
 All notable changes to this project are documented here.
 This project follows Semantic Versioning. Versions below 1.0.0 are pre-release.
 
-## [Unreleased]
+## [0.2.1] — 2026-10-26
+
+Release status: experimental pre-release; Round 1 evaluation pending.
+
+### Changed
+- Brand: suite renamed from OCCAMI NOVACULA to Organon, by Ockham. Ockham is the maker's mark; Novacula now names a separate writing suite.
+- Updated the README, `index.md`, `docs/DESIGN.md` (§2.1 and §9, spec version), `docs/source-registry.md`, the repo description, and topics to match. The README opens with "Organon: thinking tools by Ockham."
+- `docs/source-registry.md`: version 0.2.1. Upstream commit, blob SHAs, and license status re-verified 2026-10-26; unchanged.
+
+### Not changed
+- SKILL.md, references/, and all eval files are unchanged. evals/PROTOCOL.md v1.0.0 still applies.
 
 ### Added
 - `reasoning-lens/SKILL.md`: a "Blind spot" note for the model, not printed unless the user asks what the Skill cannot see. It covers facts the user left out, taste, and stances as judgment rather than measurement.
@@ -15,7 +25,6 @@ This project follows Semantic Versioning. Versions below 1.0.0 are pre-release.
 - Evaluation: these `SKILL.md` edits land before Round 1 generates anything, so Round 1 runs against the edited Skill. `references/lenses.md` and the frozen files in `evals/` are unchanged, so protocol 1.0.0 stands. Record the protocol commit SHA in the run manifest.
 
 ### Fixed
-- `docs/DESIGN.md` and `docs/source-registry.md`: the suite brand is OCCAMI NOVACULA. The retired maker name OCKHAM is gone from both.
 - `docs/DESIGN.md` §6 and `docs/source-registry.md`: both said the paper PDF is not bundled, but the repo keeps a reference copy in `docs/research/` under CC BY 4.0. Both now say so. The upstream prompts are still not bundled.
 
 ## [0.2.0] — 2026-10-04

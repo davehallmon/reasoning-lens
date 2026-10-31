@@ -1,15 +1,17 @@
 # reasoning-lens
 
+**Organon: thinking tools by Ockham.**
+
 ![reasoning-lens banner](assets/banner.png)
 
-![Version](https://img.shields.io/badge/version-0.2.0-orange)
+![Version](https://img.shields.io/badge/version-0.2.1-orange)
 ![Status](https://img.shields.io/badge/status-experimental%2C%20evaluation%20pending-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple)
 
 A Claude Skill that runs your idea past seven philosophers' ways of reasoning, one at a time, so you see what each one notices, and where they disagree.
 
-> **Experimental pre-release (0.2.0).** No eval rounds have run yet. See [How It Will Be Tested](#how-it-will-be-tested).
+> **Experimental pre-release (0.2.1).** No eval rounds have run yet. See [How It Will Be Tested](#how-it-will-be-tested).
 
 ## Why
 
@@ -266,7 +268,9 @@ The lenses work from what you tell them. They cannot check facts you leave out, 
 
 ## The Family
 
-reasoning-lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
+lens is part of [OCCAMI NOVACULA](https://github.com/davehallmon), a growing suite of Skills. Two are published:
+
+reasoning-lens is part of [Organon](https://github.com/davehallmon), the growing suite of thinking tools by Ockham. Two are published:
 
 | Skill | Question | Shape |
 |---|---|---|
@@ -289,4 +293,4 @@ See `CONTRIBUTING.md`. Design spec: [`docs/DESIGN.md`](docs/DESIGN.md).
 
 MIT for the original work in this repo. See `LICENSE` and `NOTICE.md`.
 
-![OCCAMI](assets/footer.png)
+![Ockham](assets/footer.png)
