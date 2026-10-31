@@ -1,6 +1,6 @@
 # reasoning-lens — Design Specification
 
-**Spec version:** 0.2.1 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-26
+**Spec version:** 0.2.2 · **Status:** experimental pre-release; Round 1 evaluation pending · **Updated:** 2026-10-31
 
 This is the development specification. The public overview is the repo `README.md`. The installed Skill is `reasoning-lens/SKILL.md`.
 
@@ -35,7 +35,7 @@ TWO WAYS FORWARD
 
 ### 2.1 Gate
 
-A small gate replaces the router's DIRECT mode. It skips the sweep for rewriting, formatting, translation, summarization, fact lookups, definitions, single-answer problems, and code requests. When it skips, it says so in one line, answers directly, and offers the sweep anyway. An explicit request for the sweep always runs it.
+A small gate replaces the router's DIRECT mode. It skips the sweep for rewriting, formatting, translation, summarization, fact lookups, definitions, single-answer problems, code requests, and requests to generate or rank options or pick a first step with no idea to examine. When it skips, it says so in one line (naming problem-lens when the user wants options), answers directly, and offers the sweep anyway. An explicit request for the sweep always runs it.
 
 The gate is where the Ockham razor shows up in behavior: do not run seven lenses when none would add anything.
 

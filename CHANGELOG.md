@@ -3,6 +3,21 @@
 All notable changes to this project are documented here.
 This project follows Semantic Versioning. Versions below 1.0.0 are pre-release.
 
+## [0.2.2] — 2026-10-31
+
+Release status: experimental pre-release; Round 1 evaluation pending.
+
+### Added
+- `reasoning-lens/SKILL.md`: a "Blind spot" note for the model, not printed unless the user asks what the Skill cannot see. It covers facts the user left out, taste, and stances as judgment rather than measurement.
+- `reasoning-lens/SKILL.md`: the gate now skips the sweep for a request to generate or rank options, or to pick a first step, with no idea to examine. The one-sentence skip names problem-lens as the better fit. The description says the same.
+- README: a "What It Can't See" section.
+
+### Changed
+- `docs/DESIGN.md` §2.1 (spec version 0.2.2): the gate list includes option and first-step requests.
+- `docs/source-registry.md`: version 0.2.2. Upstream commit, blob SHAs, and license status re-verified 2026-10-31; unchanged.
+- README, "The Family": says reasoning-lens is part of Organon, by Ockham, links the profile, and says when to use each sibling. Matches problem-lens.
+- Evaluation: these `SKILL.md` edits land before Round 1 generates anything, so Round 1 runs against the edited Skill. `references/lenses.md` and the frozen files in `evals/` are unchanged, so protocol 1.0.0 stands. Record the protocol commit SHA in the run manifest.
+
 ## [0.2.1] — 2026-10-26
 
 Release status: experimental pre-release; Round 1 evaluation pending.
@@ -14,15 +29,6 @@ Release status: experimental pre-release; Round 1 evaluation pending.
 
 ### Not changed
 - SKILL.md, references/, and all eval files are unchanged. evals/PROTOCOL.md v1.0.0 still applies.
-
-### Added
-- `reasoning-lens/SKILL.md`: a "Blind spot" note for the model, not printed unless the user asks what the Skill cannot see. It covers facts the user left out, taste, and stances as judgment rather than measurement.
-- `reasoning-lens/SKILL.md`: the gate now skips the sweep for a request to generate or rank options, or to pick a first step, with no idea to examine. The one-sentence skip names problem-lens as the better fit. The description says the same.
-- README: a "What It Can't See" section.
-
-### Changed
-- README, "The Family": now says reasoning-lens is part of OCCAMI NOVACULA, links the profile, and says when to use each sibling. Matches problem-lens.
-- Evaluation: these `SKILL.md` edits land before Round 1 generates anything, so Round 1 runs against the edited Skill. `references/lenses.md` and the frozen files in `evals/` are unchanged, so protocol 1.0.0 stands. Record the protocol commit SHA in the run manifest.
 
 ### Fixed
 - `docs/DESIGN.md` §6 and `docs/source-registry.md`: both said the paper PDF is not bundled, but the repo keeps a reference copy in `docs/research/` under CC BY 4.0. Both now say so. The upstream prompts are still not bundled.

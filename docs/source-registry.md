@@ -5,11 +5,11 @@
 | Field | Value |
 |---|---|
 | Project | reasoning-lens (formerly "Philosophical Reasoning Router") |
-| Version | 0.2.1 |
+| Version | 0.2.2 |
 | Release status | experimental pre-release; Round 1 evaluation pending |
 | Architecture | sweep (see `docs/decisions/0001-sweep-not-router.md`) |
 | Public repo | github.com/davehallmon/reasoning-lens |
-| Last verification | 2026-10-26 |
+| Last verification | 2026-10-31 |
 | Evaluation protocol | `evals/PROTOCOL.md` v1.0.0, frozen 2026-10-04 |
 | Production validation | not run; 1.0.0 requires a Round 1 Strong pass (`evals/PROTOCOL.md`) |
 
@@ -28,8 +28,8 @@
 | Branch | main |
 | Commit | `0682e819a19e3371c8f9d5c3ecd308a9cd0ea1cb` |
 | First retrieved | 2026-10-01 |
-| Verified | 2026-10-26 (rechecked for 0.2.1: commit is still `main` HEAD, all blob SHAs below match, no license file). Previously verified 2026-10-04. |
-| License | none declared as of 2026-10-26 |
+| Verified | 2026-10-31 (rechecked for 0.2.2: commit is still `main` HEAD, all blob SHAs below match, no license file). Previously verified 2026-10-26 and 2026-10-04. |
+| License | none declared as of 2026-10-31 |
 
 Because no license is declared, the prompts are **not redistributed** in this repo. The private development workspace keeps local copies (`.txt` renamed to `.md`, content unchanged) for source-fidelity review only.
 
